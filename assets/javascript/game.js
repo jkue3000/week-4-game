@@ -1,23 +1,33 @@
-// life points and attack points of each character
-
 // CREATE OBECTS FOR THE CHARACETRS
-var snapchatLifePoints = 100;
-var facebookLifePoints = 155;
-var twitterLifePoints = 120;
-var instagramLifePoints = 115;
 
-var snapchatAttackPoint = 11;
-var facebookAttackPoint = 9;
-var twitterAttackPoint = 12;
-var instagramAttackPoints = 7;
+var facebook ={
+	lifePoints: 155,
+	attackPoints: 9
+
+};
+
+var instagram ={
+	lifePoints: 115,
+	attackPoints: 7
+};
+
+var twitter={
+	lifePoints: 120,
+	attackPoints: 12
+};
+
+var snapchat ={
+	lifePoints: 100,
+	attackPoints: 11
+};
 
 var userPick = "";
 var userVs = "";
 
-var instagram = $('.instagram');
-var facebook = $('.facebook');
-var twitter = $('.twitter');
-var snapchat = $('.snapchat');
+// var instagram = $('.instagram');
+// var facebook = $('.facebook');
+// var twitter = $('.twitter');
+// var snapchat = $('.snapchat');
 
 chosenCharacter();
 
@@ -25,31 +35,29 @@ chosenCharacter();
 // if chosen then append to the yourCharacter class div
 function chosenCharacter(){
 	
-	facebook = $('.facebook');
 	$('.facebook').on('click', function() {
 		$('.facebook').appendTo('.yourCharacter');
-		$('userPick').push(facebook);
+		userPick =+ facebook;
+
 	});
 
-	snapchat = $('.snapchat');
 	$('.snapchat').on('click', function() {
 		$('.snapchat').appendTo('.yourCharacter');
-		$('userPick').push(snapchat);
+		userPick.push(snapchat);
 	});
 
-	twitter = $('.twitter');
 	$('.twitter').on('click', function() {
 		$('.twitter').appendTo('.yourCharacter');
-		$('userPick').push(twitter);
+		userPick.push(twitter);
 	});
 
-	instagram = $('.instagram');
 	$('.instagram').on('click', function() {
 		$('.instagram').appendTo('.yourCharacter');
-		$('userPick').push(instagram);
+		userPick.push(instagram);
 	});
 
 };
+console.log(userPick);
 
 // if not chosen then remaining container divs appendTo() vsCharacter
 function userOptionVS(){
@@ -61,33 +69,38 @@ function userOptionVS(){
 function chosenVs(){
 	$('.facebook').on('click', function() {
 		$('.facebook').appendTo('.defender');
+		userVs.push(facebook);
 	});
 
 	$('.snapchat').on('click', function() {
 		$('.snapchat').appendTo('.defender');
+		userVs.push(snapchat);
 	});
 
 	$('.twitter').on('click', function() {
 		$('.twitter').appendTo('.defender');
+		userVs.push(twitter);
 	});
 
 	$('.instagram').on('click', function() {
 		$('.instagram').appendTo('.defender');
+		userVs.push(instagram);
 	});
 };
 
 
 // create function that plugs in user picked into attckBtn function
 
-$('#attckBtn').on('click', function() {
-    if (userPick == facebook) {
-        facebookLifePoints;
-        facebookAttackPoint;
-        $('#facebookLifePoints').innerHTML('facebookLifePoints');
-    
-    } else if (userPick == $('.snapchat')){
-        
-    }
-});
+// function attackBtnClick(){
+// 	$('#attckBtn').on('click', function(){
+// 		if (userPick == facebook){
+
+// 		}
+// 	};
+
+
+// }
+
+
 
 // once attackBtn is clicked run a function
