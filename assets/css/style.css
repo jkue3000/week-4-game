@@ -1,0 +1,44 @@
+/* Change IMG background.  Try adding img background from jquery*/
+body {
+	background-image: url('../images/');
+	background-position: fixed;
+	background-repeat: repeat;
+	background-size: cover;
+};
+
+h1 {
+	text-align: center;
+}
+
+/*container for characters*/
+.container {
+	width: 100px;
+	height: 130px;
+	display: inline-block;
+	padding: 20px;
+	border: solid 2px #45f442;
+	background-color: yellow;
+}
+
+.characterPic {
+	width: 100px;
+	height: 100px;
+	margin: auto;
+}
+
+#characterText {
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+#facebookLifePoints, #twitterLifePoints, #snapchatLifePoints, #instagramLifePoints{
+	text-align: center;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+/*yourCharacter*/
+/*.yourCharacter {
+	padding-bottom: 144px;
+}*/
