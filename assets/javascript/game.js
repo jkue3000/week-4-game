@@ -35,12 +35,13 @@ var userVs = "";
 	$('.button').on('click', function() {
 		if (userPick == ""){
 			userPick = this.value;
-			if (userPick == fbClick){
+			if (userPick == this.value){
 				userPick = $('.facebook');
 			}
 			$(userPick).appendTo('.yourCharacter');
 		} else {
 			userVs = this.value;
+			if (userVs )
 			$(userVs).appendTo('.vsCharacter');
 		}
 		console.log(userPick);
